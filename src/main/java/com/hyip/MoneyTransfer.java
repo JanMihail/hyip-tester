@@ -10,13 +10,13 @@ public class MoneyTransfer {
         walletFrom.withdraw(sum);
         hyipTo.getBalans().put(sum);
 
-        log.info("Transfer {} from {} to {}", sum, walletFrom, hyipTo);
+//        log.info("Transfer {} from {} to {}", sum, walletFrom, hyipTo);
     }
 
     public static void transfer(Hyip hyipFrom, Wallet walletTo, double sum) {
         hyipFrom.getBalans().withdraw(sum);
         walletTo.put(sum);
 
-        log.info("Transfer {} from {} to {}", sum, hyipFrom, walletTo);
+//        log.info("Transfer {} from {} to {}", sum, hyipFrom, walletTo);
     }
 }

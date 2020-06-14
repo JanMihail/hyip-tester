@@ -138,7 +138,7 @@ public class StrategyInvest {
      * Открывает в указанном хайпе тарифный план, который тестируется в этой стратегии
      */
     private void openTariffPlan(Hyip hyip, double summa) {
-        hyip.openTariffPlan(20, 1.5, summa);
+        hyip.openTariffPlan(30, 1.0, summa);
     }
 
     private void withdrawDailyProfit(Hyip hyip) {

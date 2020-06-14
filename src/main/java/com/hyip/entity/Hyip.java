@@ -30,6 +30,12 @@ public class Hyip {
     }
 
     public void openTariffPlan(long investDaysCount, double dayPercent, double investSumma) {
+        if (tariffPlan != null && tariffPlan.getStatus().equals(TariffPlan.Status.ACTIVE)) {
+            throw new RuntimeException(String.format(
+                "Unable to open a tariff plan while another is active. %s",
+                tariffPlan));
+        }
+
         tariffPlan = new TariffPlan(investDaysCount, dayPercent, investSumma);
         balans.withdraw(investSumma);
     }

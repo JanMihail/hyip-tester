@@ -10,9 +10,9 @@ public class Main {
         StrategyInvest myStrategy = new StrategyInvest(
             5,
             1000,
-            2,
-            59,
-            120
+            1,
+            30,
+            10
         );
         myStrategy.run();
 
